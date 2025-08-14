@@ -118,8 +118,9 @@
 
 ### Code (implemented in `contact_book.dart` → `load()` & `save()`)
 
+#### Prepare the Contact Model
 ```dart
-// contact_book.dart
+// contact_model.dart
 import 'dart:convert';
 import 'dart:io';
 
@@ -158,7 +159,10 @@ class Contact {
     return '$name (id: $id)\n  Phone: $phone\n  Email: $email';
   }
 }
-
+```
+#### Prepare the `contact_book` Library with `Save` and `Load` contacts from json file
+```dart
+// contact_book.dart
 /// ContactBook handles in-memory list + file persistence.
 class ContactBook {
   final String filePath;
